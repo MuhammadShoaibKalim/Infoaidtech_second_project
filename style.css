@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --themecolor: black;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--themecolor);
+  display: grid;
+  place-items: center;
+}
+
+.calcWrapper {
+  background: white;
+  padding: 40px 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 15px 30px 25px black;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#result {
+  width: 100%;
+  height: 70px;
+  border: 2px solid var(--themecolor);
+  border-radius: 10px;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+  text-align: right;
+  font-size: 35px;
+  overflow: hidden;
+  padding: 10px;
+  word-wrap: none;
+}
+
+.btnWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  display: grid;
+}
+
+.row:last-child {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.row input,
+.row .resultBtn {
+  font-size: 22px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--themecolor);
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+input.BackSpace {
+  font-size: 34px;
+}
+.row input:active,
+.row .resultBtn:active {
+  transform: scale(0.9);
+}
